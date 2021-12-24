@@ -2,13 +2,7 @@ console.log("This is registration page");
 
 const registrationform = document.getElementById("registration-form");
 
-const u = localStorage.getItem("userInfo");
-if (u   ) {
-    goTo("home.html");
-}
-
 console.log(registrationform);
-
 
 function getSelected(select) {
     let selectedValues =[];
@@ -33,6 +27,5 @@ registrationform.onsubmit = function (event) {
         darkmode: darkmode,
     };
     console.log(data);
-    localStorage.setItem("userInfo",JSON.stringify(data));
-    goTo("home.html");
-};
+    localStorage.setItem("userInfo",JSON.stringify(data))};
+}
